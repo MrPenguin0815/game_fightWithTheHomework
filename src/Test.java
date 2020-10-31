@@ -1,6 +1,6 @@
 public class Test {
 
-    // 新修改 左侧变色待提交 不用add  修改而已
+
     public static void main(String[] args) {
         Monster mon = new Monster();
         Character cha = new Character();
@@ -43,7 +43,7 @@ public class Test {
 
         for (int num = 1; ; num++) {
             System.out.println("回合" + num);
-            boolean skillIsChosen = false;
+            boolean skillIsChosen = false;//判断是否发动技能
             System.out.println("是否发动技能？（Y/N）：");
             char confirmSelection = Utility.readConfirmSelection();
             if (confirmSelection == 'Y') {
@@ -81,10 +81,10 @@ public class Test {
             if (!skillIsChosen) {
                 cha.skill(mon);
                 System.out.println(mon.getName() + "当前血量：" + mon.getHitPoints());
-                if (mon.getHitPoints() <= 0) {
-                    System.out.println("you win");
-                    return;
-                }
+            }//如果没有选择技能，就发动普攻
+            if (mon.getHitPoints() <= 0) {
+                System.out.println("you win");
+                return;
             }
 
 
