@@ -1,4 +1,6 @@
 public class Test {
+
+    // 新修改 左侧变色待提交 不用add  修改而已
     public static void main(String[] args) {
         Monster mon = new Monster();
         Character cha = new Character();
